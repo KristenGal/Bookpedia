@@ -26,8 +26,8 @@ def add_book():
                     author=data.get("author"), 
                     year=data.get("year"),
                     description=data.get("description"),
-                    rating=data.get("rating", None),
-                    image_url=data.get("image_url", None))
+                    rating=data.get("rating"),
+                    image_url=data.get("image_url"))
         # book = Book(**data)
         Config.SESSION.add(book)
         Config.SESSION.commit()
