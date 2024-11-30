@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if not book %}
+    <h1>Oops! There is no such book</h1>
+
+{% else %}
+    <img src="{{book.image_url}}" alt="image for {{book.title}}">
+    <h2>{{book.title}}</h2>
+    <h3>{{book.author}} - {{book.year}} year</h3>
+    <div class="text-warning">
+        <h4>{{book.rating}}/5★</h4>
+    </div>
+    <ul>
+        <h4>{{book.description}}</h4>
+    </ul>
+
+{% endif %}
+
+{% endblock %}
+
+<!-- description -->
